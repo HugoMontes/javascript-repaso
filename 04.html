@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Un array sobreescrito con var 
+        // simulando la adicion de un elemento
+        var edades = [10,20,30]
+        var edades = [10,20,30,40]
+        console.log(edades) // [10,20,30,40]
+
+        // Un array sobreescrito con let
+        // simulando la adicion de un elemento
+        let edades = [10,20,30]
+        edades = [10,20,30,40]
+        console.log(edades) // [10,20,30,40]
+
+        // Intentando sobreescribir un const
+        // simulando la adicion de un elemento
+        const edades = [10,20,30]
+        edades = [10,20,30,40] // Error: "edades" is read-only
+        console.log(edades) 
+
+        // Forma correcta de adicionar elementos a 
+        // un array
+        const edades = [10,20,30]
+        edades.push(40)
+        console.log(edades) // [10,20,30,40]
+        
+        // Definiendo un objeto como constante
+        const persona = {
+            nombre: 'juan',
+            edad: 20
+        }
+        console.log(persona);
+        // Los objetos como constantes
+        // permiten sobrescribir valores de atributos
+        persona.edad = 21
+        persona.pais = 'Bolivia'
+        console.log(persona);
+    </script>
+</body>
+</html>

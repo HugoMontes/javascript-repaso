@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declarar un objetos
+        const empleado = {
+            nombre: 'Juan',
+            edad: 45,
+            departamento: 'Contabilidad',
+            horarios: ['tarde', 'noche']
+        }
+
+        // Acceder a las propiedades de un objeto
+        // sin destructurar
+        console.log(`Nombre: ${empleado.nombre}`)
+        console.log(`Edad: ${empleado.edad}`)
+        
+        // Acceder a las propiedades de un objeto
+        // destructurando
+        const {nombre, edad} = empleado
+        console.log(`Nombre: ${nombre}`)
+        console.log(`Edad: ${edad}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const edad = 10;
+        const edad = 20; // SyntaxError
+
+        const edad = 10;
+        edad = 20; // Error: "edad" is read-only
+
+        const edad = 10;
+            if(true){
+                const edad = 20;
+                console.log(edad); // 20
+            }
+        console.log(edad); // 10
+    </script>
+</body>
+</html>

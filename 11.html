@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obtenerPaises = async() => {
+            try{
+                // El await se debe utilizar dentro de una funcion async
+                // Obtener la respuesta de la peticion
+                const res = await fetch('https://restcountries.eu/rest/v2/all')
+                // Obtener la data en formato json
+                const data = await res.json()
+                // console.log(data);
+                // Iterar el array mostrando paises y poblacion
+                data.forEach(element => {
+                    console.log(element.name+' - '+element.population);
+                });
+            }catch(error){
+                console.log(error);
+            }
+        }
+        // Llamar a la funcion
+        obtenerPaises();
+    </script>
+</body>
+</html>

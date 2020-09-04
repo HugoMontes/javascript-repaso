@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Objetos dentro de objetos
+        const empresa = {
+            nombre: 'PANIFICADORA ABC',
+            direccion:{
+                zona: 'Miraflores',
+                calle: 'Av Bush',
+                nro: '123'
+            },
+            departamentos:{
+                contabilidad:{
+                    jefe: 'Juan Perez',
+                    totalEmpleados: 7
+                },
+                sistemas:{
+                    jefe: 'Ana Robles',
+                    totalEmpleados: 5
+                }
+            }
+        }
+        // Obtener el nombre del jefe de contabilidad
+        const jefeContabilidad = empresa.departamentos.contabilidad.jefe
+        console.log(jefeContabilidad)
+        // Aplicar restructuracion para obtener
+        // nombre del jefe de sistemas y numero de empleados
+        const {jefe, totalEmpleados} = empresa.departamentos.sistemas
+        console.log(jefe)
+        console.log(totalEmpleados)
+    </script>
+</body>
+</html>
